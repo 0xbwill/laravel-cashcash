@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin;
+use App\Http\Controllers\Technicien;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,16 +20,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware('auth:sanctum', 'verified')->name('dashboard');
 
-Route::get('/rechercher', function () {
-    return view('rechercher');
-})->name('rechercher');
+Route::get('/rechercher', [Technicien::class, 'rechercheClient'])->name('rechercher');

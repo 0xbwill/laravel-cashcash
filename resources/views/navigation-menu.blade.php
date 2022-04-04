@@ -6,14 +6,19 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    @if (Auth::user()->isTechnicien == 1)
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Acceuil') }}
+                        {{ __('Gestion d\'intervention') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('rechercher') }}" :active="request()->routeIs('rechercher')">
-                        {{ __('Rechercher') }}
-                    </x-jet-nav-link> <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('PDF') }}
                     </x-jet-nav-link>
+                    <p class="align-self-center text-white" >Vous êtes technicien.</p>
+                    @else 
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Accueil') }}
+                    </x-jet-nav-link>
+                    @endif
                 </div>
             </div>
 
