@@ -27,3 +27,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/rechercher', function () {
+    return view('rechercher');
+})->name('rechercher');
