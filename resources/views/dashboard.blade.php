@@ -12,9 +12,6 @@
                             <button type="submit" class="btn btn-primary ml-3">Rechercher</button>
                         </form>
                     </div>
-                    
-
-
                     @endif
             </div>
         </div>
