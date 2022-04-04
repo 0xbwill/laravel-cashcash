@@ -20,7 +20,7 @@
                     <tbody>
                         <tr>
                             @foreach ($client as $unClient)
-                                <td>{{ $unClient->id }}</p>
+                                <td>{{ $unClient->numeroClient }}</p>
                                 <td>{{ $unClient->nom }}</p>
                                 <td>{{ $unClient->prenom }}</p>
                                 <td>{{ $unClient->tel }}</p>

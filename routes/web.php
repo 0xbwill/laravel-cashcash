@@ -21,7 +21,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $agences = DB::table('agences')->get();
+    return view('dashboard', compact('agences'));
 })->middleware('auth:sanctum', 'verified')->name('dashboard');
 
 Route::get('/rechercher', [Technicien::class, 'rechercheClient'])->name('rechercher');

@@ -12,7 +12,7 @@ class Technicien extends Controller
     $client = $request->input('search');
 
     $client = DB::table('clients')
-    ->where('id', $client)
+    ->where('numeroClient', $client)
     ->get();
 
     return view('rechercher', compact('client'));

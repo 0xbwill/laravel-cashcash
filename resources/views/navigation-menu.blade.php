@@ -15,7 +15,7 @@
                     </x-jet-nav-link>
                     @else 
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Accueil') }}
+                        {{ __('Agences') }}
                     </x-jet-nav-link>
                     @endif
                 </div>
