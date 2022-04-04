@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="" style="background-color:#0e131c">
+<nav x-data="{ open: false }" class="" style="background-color:#0e131c;border-bottom: 2px #282f3d solid">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
