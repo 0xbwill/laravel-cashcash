@@ -25,6 +25,7 @@
             <a href="{{ route('login') }}"><button type="button" class="border rounded px-3 py-2 text-white">Accéder à mon espace</button></a>
             @else
             <a href="{{ route('login') }}"><button type="button" class="border rounded px-3 py-2 text-white">Je me connecte</button></a>
+            <a href="{{ route('register') }}"><button type="button" class="border rounded px-3 py-2 text-white">Je m'inscris</button></a>
             @endif
 
 
