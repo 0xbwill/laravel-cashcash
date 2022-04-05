@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('intervention', function (Blueprint $table) {
-            $table->id('numeroIntervenant');
+            $table->id();
+            $table->integer('numeroIntervenant');
             $table->date('dateVisite');
             $table->time('heureVisite');
             $table->integer('numeroClient');
-            $table->integer('id');
-            $table->integer('telephoneMobile');
+            $table->integer('telephoneMobile')->nullable();
         });    }
 
     /**

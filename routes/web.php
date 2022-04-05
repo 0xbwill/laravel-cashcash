@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin;
+use App\Http\Controllers\Gestionnaire;
 use App\Http\Controllers\Technicien;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -25,4 +26,12 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('agences'));
 })->middleware('auth:sanctum', 'verified')->name('dashboard');
 
+
+// Route pour les techniciens
 Route::get('/rechercher', [Technicien::class, 'rechercheClient'])->name('rechercher');
+
+// Routes pour les gestionnaires
+Route::get('/agence', [Gestionnaire::class, 'selectAgence'])->name('selection.agence');
+
+Route::get('/assigner/intervention/{numeroClient}', [Gestionnaire::class, 'newIntervention'])->name('assigner.intervention');
+Route::post('/insert/new/intervention', [Gestionnaire::class, 'insertNewIntervention'])->name('insert.intervention');

@@ -1,9 +1,8 @@
 INSERT INTO `users` (`id`, `name`, `surname`, `isTechnicien`, `email`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `qualification`, `adresse`, `dateObtention`, `dateEmbauche`, `numeroAgence`, `remember_token`, `email_verified_at`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-(1, 'William', NULL, 1, '0xbwill@gmail.com', '$2y$10$HAldnBjcEWfJ/GfSrS/Fgu4OSIh3HzmTNljDmXAwMewSbBCv3Vf66', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-05 05:23:52', '2022-04-05 05:23:52'),
-(2, 'nico', NULL, 1, 'nico@gmail.com', '$2y$10$Q7rLUxVu9y17KTrDGMBy.e7ao/uIj.gRGsmEo1SxhDMYwjlKyYcBK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-05 05:24:33', '2022-04-05 05:24:33'),
-(3, 'Rachad', NULL, 1, 'rachad@gmail.com', '$2y$10$ssIhGt2a2wWIg20yYH7xAerjgNd78/PcDyD/qZApkxGgScLykWSL.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-05 05:25:16', '2022-04-05 05:25:16'),
-(4, 'Hugo', NULL, NULL, 'hugo@gmail.com', '$2y$10$nAGdn.B7IYppv.ATLagc3OacQcEKZpOXRS6ZuozS/PzFOdrF50qje', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-05 05:25:41', '2022-04-05 05:25:41'),
-(5, 'Mathéo', NULL, NULL, 'matheo@gmail.com', '$2y$10$TIUshnQ4kCeoY.ZxYV2x6O6ogUClAfknvFeKNGOD2fy5cxhfGboAO', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-05 05:26:05', '2022-04-05 05:26:05');
+(1, 'William', NULL, 1, '0xbwill@gmail.com', '$2y$10$HAldnBjcEWfJ/GfSrS/Fgu4OSIh3HzmTNljDmXAwMewSbBCv3Vf66', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 05:23:52', '2022-04-05 05:23:52'),
+(2, 'nico', NULL, 1, 'nico@gmail.com', '$2y$10$Q7rLUxVu9y17KTrDGMBy.e7ao/uIj.gRGsmEo1SxhDMYwjlKyYcBK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, '2022-04-05 05:24:33', '2022-04-05 05:24:33'),
+(4, 'Hugo', NULL, NULL, 'hugo@gmail.com', '$2y$10$nAGdn.B7IYppv.ATLagc3OacQcEKZpOXRS6ZuozS/PzFOdrF50qje', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 4, NULL, NULL, NULL, NULL, '2022-04-05 05:25:41', '2022-04-05 05:25:41'),
+(5, 'Mathéo', NULL, NULL, 'matheo@gmail.com', '$2y$10$TIUshnQ4kCeoY.ZxYV2x6O6ogUClAfknvFeKNGOD2fy5cxhfGboAO', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, '2022-04-05 05:26:05', '2022-04-05 05:26:05');
 
 INSERT INTO `agences` (`numeroAgence`, `nomAgence`, `adresseAgence`, `telephoneAgence`) VALUES
 (1, 'Commeungrand', '3 Rue du Jardin', 617254201),
@@ -36,7 +35,7 @@ INSERT INTO `controler` (`numeroIntervenant`, `numeroDeSerie`, `numeroClient` ,`
 (4, 2004, '2', '04:00:00', 'good'),
 (5, 2003, '2', '03:00:00', 'okay');
 
-INSERT INTO `intervention` (`numeroIntervenant`, `dateVisite`, `heureVisite`, `numeroClient`, `id`, `telephoneMobile`) VALUES
+INSERT INTO `intervention` (`id`, `dateVisite`, `heureVisite`, `numeroClient`, `numeroIntervenant`, `telephoneMobile`) VALUES
 (1, '2021-11-22', '01:00:00', 3, 1, 654892451),
 (2, '2021-11-23', '01:00:00', 2, 2, 654589265),
 (3, '2021-11-24', '03:00:00', 3, 3, 698213546),
