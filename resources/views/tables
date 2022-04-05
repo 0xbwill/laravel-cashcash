@@ -12,3 +12,37 @@ INSERT INTO `clients` (`numeroClient`, `nom`, `prenom`, `email`, `adresse`, `tel
 (5, 'Taheb', 'Utilisateur', 'user@gmail.com', 'rue du lengley', '654128975', '34343', 2, 423235, 'Etudiant', '01:00:00', 30 ),
 (6, 'Watts', 'Utilisateur', 'user@gmail.com', 'rue du rocnard', '698752145', '34343', 4, 423235, 'Etudiant', '01:00:00', 5 ),
 (7, 'Huges', 'Utilisateur', 'user@gmail.com', 'rue du poudlard', '658912545', '34343', 2, 423235, 'Etudiant', '01:00:00', 10);
+
+INSERT INTO `contrat_de_maintenance` (`numeroDeContrat`, `dateDeSignature`, `dateEcheance`, `numeroClient`, `refTypeContrat`) VALUES
+(1, '2021-11-03', '2021-11-03', 1, 1),
+(2, '2021-11-02', '2021-11-02', 2, 2),
+(3, '2021-11-01', '2021-11-01', 3, 3),
+(4, '2021-11-03', '2021-11-03', 4, 3),
+(5, '2021-11-02', '2021-11-02', 5, 2),
+(6, '2021-11-01', '2021-11-01', 6, 2),
+(7, '2021-11-01', '2021-11-01', 7, 3);
+
+INSERT INTO `controler` (`numeroIntervenant`, `numeroDeSerie`, `numeroClient` ,`tempsPasse`, `commentaire`) VALUES
+(1, 2000, '3', '02:00:00', 'okay'),
+(2, 2001, '2', '02:00:00', 'good'),
+(3, 2004, '2', '03:00:00', 'okay'),
+(4, 2004, '2', '04:00:00', 'good'),
+(5, 2003, '2', '03:00:00', 'okay');
+
+INSERT INTO `intervention` (`numeroIntervenant`, `dateVisite`, `heureVisite`, `numeroClient`, `id`, `telephoneMobile`) VALUES
+(1, '2021-11-22', '01:00:00', 3, 1, 654892451),
+(2, '2021-11-23', '01:00:00', 2, 2, 654589265),
+(3, '2021-11-24', '03:00:00', 3, 3, 698213546),
+(4, '2021-11-25', '01:00:00', 4, 4, 654289632),
+(5, '2021-11-23', '02:00:00', 5, 5, 654241358);
+
+INSERT INTO `materiel` (`numeroDeSerie`, `dateDeVente`, `dateInstallation`, `prixVente`, `emplacement`, `refInterne`, `numeroClient`, `numeroContrat`) VALUES
+(2000, '2021-11-28', '2021-11-28', 60, 'cuisine', 1, 1, 1),
+(2001, '2021-11-27', '2021-11-27', 130, 'cuisine', 2, 2, 2),
+(2003, '2021-11-29', '2021-11-29', 45, 'salon', 3, 6, 6),
+(2004, '2021-11-29', '2021-11-29', 156, 'cuisine', 2, 5, 6);
+
+INSERT INTO `type_contrat` (`refTypeContrat`, `detailIntervention`, `tauxApplicable`) VALUES
+(1, '2021-11-03', 0.15),
+(2, '2021-11-02', 0.2),
+(3, '2021-11-01', 0.1);
