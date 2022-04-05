@@ -16,7 +16,7 @@
                     @else
                     <h1 class="h1 text-center">Liste des agences</h1>
                     <div class="mt-3 d-flex justify-center">
-                    <form action="" class="d-flex" style="width:40vh">
+                    <form action="" class="d-flex" style="width:60vh">
                         <select name="" id="" class="form-control">
                             <option value="">Sélectionnez une agence</option>
                             @foreach ($agences as $uneAgence)
