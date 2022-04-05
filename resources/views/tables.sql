@@ -17,13 +17,13 @@ INSERT INTO `agences` (`numeroAgence`, `nomAgence`, `adresseAgence`, `telephoneA
 (4, 'Milwaulkee', '38 rue du bucks', 654897521);
 
 INSERT INTO `clients` (`numeroClient`, `nom`, `prenom`, `email`, `adresse`, `tel`, `siren`, `numeroAgence`, `codeAPE`, `raisonSociale`, `dureeDeplacement`, `distanceKm`) VALUES
-(1, 'Herbaut', 'Utilisateur', 'user@gmail.com', 'Rue de la Gloire', '654892545', '34343', 3, 452332, 'Etudiant', '01:00:00', 20 ),
-(2, 'Normand', 'Utilisateur', 'user@gmail.com', 'rue du Marechal', '6 54 89 25 45', '34343', 2, 423235, 'Etudiant', '01:00:00', 30),
-(3, 'Correia', 'Utilisateur', 'user@gmail.com', 'rue du calbart', '654895215', '34343', 4, 423235, 'Etudiant', '01:00:00', 20 ),
-(4, 'Vierlot', 'Utilisateur', 'user@gmail.com', 'rue du marco', '654892135', '34343', 1, 423235, 'Etudiant', '01:00:00', 10 ),
-(5, 'Taheb', 'Utilisateur', 'user@gmail.com', 'rue du lengley', '654128975', '34343', 2, 423235, 'Etudiant', '01:00:00', 30 ),
-(6, 'Watts', 'Utilisateur', 'user@gmail.com', 'rue du rocnard', '698752145', '34343', 4, 423235, 'Etudiant', '01:00:00', 5 ),
-(7, 'Huges', 'Utilisateur', 'user@gmail.com', 'rue du poudlard', '658912545', '34343', 2, 423235, 'Etudiant', '01:00:00', 10);
+(1, 'Herbaut', 'Thibault', 'user@gmail.com', 'Rue de la Gloire, 12000', '06 54 89 25 45', '34343', 3, 452332, 'Etudiant', '01:00:00', 20 ),
+(2, 'Normand', 'Hugo', 'user@gmail.com', 'Rue du Maréchal, 15000', '06 54 89 25 45', '34343', 2, 423235, 'Etudiant', '01:00:00', 30),
+(3, 'Correia', 'Matéo', 'user@gmail.com', 'Rue des Avenants, 62000', '06 54 89 52 15', '34343', 4, 423235, 'Etudiant', '01:00:00', 20 ),
+(4, 'Vierlot', 'Pierre', 'user@gmail.com', 'Rue des Compiennes, 59000', '06 54 89 21 35', '34343', 1, 423235, 'Etudiant', '01:00:00', 10 ),
+(5, 'Taheb', 'Jacques', 'user@gmail.com', 'Rue du Lengley, 58000', '06 54 12 89 75', '34343', 2, 423235, 'Etudiant', '01:00:00', 30 ),
+(6, 'Watts', 'Allan', 'user@gmail.com', 'Rue du Firmament, 91000', '06 98 75 21 45', '34343', 4, 423235, 'Etudiant', '01:00:00', 5 ),
+(7, 'Huges', 'Dick', 'user@gmail.com', 'Avenue de la Gloire, 59000', '06 58 91 25 45', '34343', 2, 423235, 'Etudiant', '01:00:00', 10);
 
 INSERT INTO `contrat_de_maintenance` (`numeroDeContrat`, `dateDeSignature`, `dateEcheance`, `numeroClient`, `refTypeContrat`) VALUES
 (1, '2021-11-03', '2021-11-03', 1, 1),

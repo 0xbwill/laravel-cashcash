@@ -8,7 +8,7 @@
                 </div>
             @endif
             <div class="overflow-hidden sm:rounded-lg text-white">
-                <h1 class="h1 text-center mb-5">Vos interventions</h1>
+                <h2 class="h2 text-center mb-5">Vos interventions</h2>
                 <div class="d-flex">
                     @foreach ($mesInterventions as $uneIntervention)
                     <div class="card text-white mb-3 rounded-lg mx-3" style="max-width: 18rem;background-color:#0e131c;border:2px #282f3d solid">

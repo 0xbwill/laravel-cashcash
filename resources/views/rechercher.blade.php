@@ -13,18 +13,18 @@
 
             @if ($client->isNotEmpty())
             <div class="table-responsive"> 
-                <table class="table border border-white text-white mt-2" style="background-color:#0e131c">
+                <table class="table border border-white text-white mt-2 text-center" style="background-color:#0e131c">
                     <thead>
                         <tr>
                             <th scope="col">Numéro client</th>
                             <th scope="col">Nom</th>
                             <th scope="col">Prénom</th>
-                            <th scope="col">email</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Téléphone</th>
                             <th scope="col">Adresse</th>
-                            <th scope="col">Num siren</th>
-                            <th scope="col">Num agence</th>
-                            <th scope="col">Code APE</th>
+                            <th scope="col">SIREN</th>
+                            <th scope="col">Numéro d'agence</th>
+                            <th scope="col">APE</th>
                             <th scope="col">Raison sociale</th>
                             <th scope="col">Durée déplacement</th>
                             <th scope="col">Distance en KM</th>
