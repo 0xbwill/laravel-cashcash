@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class Gestionnaire extends Controller
 {
+    public function __construct() {
+		$this->middleware('auth:sanctum');
+	}
+
     public function selectAgence(Request $request) {
 
         $selectedAgence = $request->input('selectAgence');

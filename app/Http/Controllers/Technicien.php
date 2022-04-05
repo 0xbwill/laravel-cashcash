@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\DB;
 class Technicien extends Controller
 {
 
+    public function __construct() {
+		$this->middleware('auth:sanctum');
+	}
+
     public function listeInterventions() {
         $mesInterventions = DB::table('intervention')
         ->where('numeroIntervenant', Auth::user()->id)
