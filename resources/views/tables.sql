@@ -1,8 +1,10 @@
 INSERT INTO `users` (`id`, `name`, `surname`, `isTechnicien`, `email`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `qualification`, `adresse`, `dateObtention`, `dateEmbauche`, `numeroAgence`, `remember_token`, `email_verified_at`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-(1, 'William', NULL, 1, '0xbwill@gmail.com', '$2y$10$HAldnBjcEWfJ/GfSrS/Fgu4OSIh3HzmTNljDmXAwMewSbBCv3Vf66', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 05:23:52', '2022-04-05 05:23:52'),
-(2, 'nico', NULL, 1, 'nico@gmail.com', '$2y$10$Q7rLUxVu9y17KTrDGMBy.e7ao/uIj.gRGsmEo1SxhDMYwjlKyYcBK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, '2022-04-05 05:24:33', '2022-04-05 05:24:33'),
+(1, 'William', 'DEGHESELLE', 1, '0xbwill@gmail.com', '$2y$10$HAldnBjcEWfJ/GfSrS/Fgu4OSIh3HzmTNljDmXAwMewSbBCv3Vf66', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 05:23:52', '2022-04-05 05:23:52'),
+(2, 'nico', 'VANDAMME', 1, 'nico@gmail.com', '$2y$10$Q7rLUxVu9y17KTrDGMBy.e7ao/uIj.gRGsmEo1SxhDMYwjlKyYcBK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, '2022-04-05 05:24:33', '2022-04-05 05:24:33'),
+(3, 'Rachad', 'RACHEDI', 1, 'rachad@gmail.com', '$2y$10$UMewrB25n.4Tx7BgW7PuruujFkeR5uK5GNCTwcT0PsmyMT1IPYALi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 07:54:14', '2022-04-05 07:54:14'),
 (4, 'Hugo', NULL, NULL, 'hugo@gmail.com', '$2y$10$nAGdn.B7IYppv.ATLagc3OacQcEKZpOXRS6ZuozS/PzFOdrF50qje', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 4, NULL, NULL, NULL, NULL, '2022-04-05 05:25:41', '2022-04-05 05:25:41'),
 (5, 'Mathéo', NULL, NULL, 'matheo@gmail.com', '$2y$10$TIUshnQ4kCeoY.ZxYV2x6O6ogUClAfknvFeKNGOD2fy5cxhfGboAO', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, '2022-04-05 05:26:05', '2022-04-05 05:26:05');
+
 
 INSERT INTO `agences` (`numeroAgence`, `nomAgence`, `adresseAgence`, `telephoneAgence`) VALUES
 (1, 'Commeungrand', '3 Rue du Jardin', 617254201),
