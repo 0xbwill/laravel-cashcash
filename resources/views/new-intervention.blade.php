@@ -13,11 +13,12 @@
                         @endforeach
                     </select>
 
-                    <label for="heureVisite">Heure visite :</label>
                     <label for="dateVisite">Date visite :</label>
                     <input class="form-control mb-4" type="date" name="dateVisite" id="dateVisite">
+
                     <label for="heureVisite">Heure visite :</label>
                     <input class="form-control mb-4" type="time" name="heureVisite" id="heureVisite">
+                    
                     <button class="btn btn-primary mt-3" type="submit">Confirmer</button>
                     <input name="numeroClient" type="hidden" value="{{ $newIntervention->numeroClient }}">
                 </form>
@@ -28,6 +29,7 @@
                 <p>Nom & prénom : {{$newIntervention->nom. ' '.$newIntervention->prenom }}</p>
                 <p>Adresse : {{$newIntervention->adresse}}</p>
                 <p>Email : {{$newIntervention->email}}</p>
+                <p>Téléphone : {{$newIntervention->tel}}</p>
                 <p>SIREN : {{$newIntervention->siren}}</p>
                 <p>Numéro agence : {{$newIntervention->numeroAgence}}</p>
                 <p>Code APE : {{$newIntervention->codeApe}}</p>

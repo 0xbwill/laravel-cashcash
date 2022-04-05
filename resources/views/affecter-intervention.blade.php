@@ -18,7 +18,7 @@
 
                 <div class="container mt-5">
                     <div class="row d-flex justify-center">
-                        <div class="col-md-5 mx-5 rounded-lg h-100 pb-3"
+                        <div class="col-md-6 mx-5 rounded-lg h-100 pb-3"
                             style="border: 2px #282f3d solid;background-color: #0e131c">
                             <h5 class="h5 text-center my-4">Liste des clients :</h5>
                             @foreach ($listeClient as $unClient)
