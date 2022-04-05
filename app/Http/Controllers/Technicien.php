@@ -3,10 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class Technicien extends Controller
 {
+
+    public function listeInterventions() {
+        $mesInterventions = DB::table('intervention')
+        ->where('numeroIntervenant', Auth::user()->id)
+        ->get();
+
+        return view('liste-intervention', compact('mesInterventions'));
+    }
+
+
     public function rechercheClient(Request $request)
     {
 

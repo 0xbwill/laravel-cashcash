@@ -9,7 +9,7 @@
             @endif
             <div class="overflow-hidden sm:rounded-lg text-white">
                 @if (Auth::user()->isTechnicien == 1)
-                    <h1 class="h1 text-center">Interface de gestion d'intervention</h1>
+                    <h1 class="h1 text-center">Gestion des clients</h1>
 
                     <div class="d-flex justify-center mt-3">
                         <form action="{{ route('rechercher') }}" method="GET">

@@ -31,6 +31,7 @@ Route::get('/dashboard', function () {
 Route::get('/rechercher', [Technicien::class, 'rechercheClient'])->name('rechercher');
 Route::get('/recherche/modifier/{numeroClient}', [Technicien::class, 'editRecherche'])->name('modifier.rechercher');
 Route::post('/recherche/update/{numeroClient}', [Technicien::class, 'updateRecherche'])->name('update.rechercher');
+Route::get('/interventions', [Technicien::class, 'listeInterventions'])->name('interventions');
 
 
 

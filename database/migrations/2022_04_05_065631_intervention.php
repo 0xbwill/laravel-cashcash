@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('dateVisite');
             $table->time('heureVisite');
             $table->integer('numeroClient');
-            $table->integer('telephoneMobile')->nullable();
+            $table->string('tel')->nullable();
         });    }
 
     /**

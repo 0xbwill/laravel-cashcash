@@ -8,10 +8,10 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @if (Auth::user()->isTechnicien == 1)
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Gestion d\'intervention') }}
+                        {{ __('Clients') }}
                     </x-jet-nav-link>
-                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('PDF') }}
+                    <x-jet-nav-link href="{{ route('interventions') }}" :active="request()->routeIs('interventions')">
+                        {{ __('Interventions') }}
                     </x-jet-nav-link>
                     @else 
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
