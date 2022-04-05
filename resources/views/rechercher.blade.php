@@ -13,7 +13,15 @@
                             <th scope="col">Numéro client</th>
                             <th scope="col">Nom</th>
                             <th scope="col">Prénom</th>
+                            <th scope="col">email</th>
                             <th scope="col">Téléphone</th>
+                            <th scope="col">Adresse</th>
+                            <th scope="col">Num siren</th>
+                            <th scope="col">Num agence</th>
+                            <th scope="col">Code APE</th>
+                            <th scope="col">Raison sociale</th>
+                            <th scope="col">Durée déplacement</th>
+                            <th scope="col">Distance en KM</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -23,7 +31,15 @@
                                 <td>{{ $unClient->numeroClient }}</p>
                                 <td>{{ $unClient->nom }}</p>
                                 <td>{{ $unClient->prenom }}</p>
+                                <td>{{ $unClient->email }}</p>
                                 <td>{{ $unClient->tel }}</p>
+                                <td>{{ $unClient->adresse }}</p>
+                                <td>{{ $unClient->siren }}</p>
+                                <td>{{ $unClient->numeroAgence }}</p>
+                                <td>{{ $unClient->codeApe }}</p>
+                                <td>{{ $unClient->raisonSociale }}</p>
+                                <td>{{ $unClient->dureeDeplacement }}</p>
+                                <td>{{ $unClient->distanceKm }}</p>
                                 <td><button type="button" class="btn btn-primary">Modifier</button></p>
                             @endforeach
                         </tr>
