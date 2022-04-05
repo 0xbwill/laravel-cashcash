@@ -1,6 +1,11 @@
 <x-app-layout>
 
     <div class="py-12">
+        @if (session('success'))
+            <div class="alert alert-success" role="alert">
+                <strong> {{ session('success') }}</strong>
+            </div>
+        @endif
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="overflow-hidden sm:rounded-lg text-white mb-3">
                 <h2 class="h2 text-center">Résultat recherche</h2>
@@ -40,7 +45,8 @@
                                 <td>{{ $unClient->raisonSociale }}</p>
                                 <td>{{ $unClient->dureeDeplacement }}</p>
                                 <td>{{ $unClient->distanceKm }}</p>
-                                <td><button type="button" class="btn btn-primary">Modifier</button></p>
+                                <td><a href="{{ url('recherche/modifier/' . $unClient->numeroClient) }}"
+                                        class="btn btn-primary">Modifier</a></p>
                             @endforeach
                         </tr>
                     </tbody>
@@ -48,7 +54,8 @@
             @else
                 <div class="d-flex justify-center">
                     <h3 class="h3 text-white text-center mt-3">Aucun résultat</h2><br>
-                    <a href="{{ route('dashboard')}}" class="btn btn-primary text-center h-50 mt-1 ml-3 align-self-center">Retour</a>
+                        <a href="{{ route('dashboard') }}"
+                            class="btn btn-primary text-center h-50 mt-1 ml-3 align-self-center">Retour</a>
                 </div>
             @endif
         </div>
