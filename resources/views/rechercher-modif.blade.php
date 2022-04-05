@@ -7,8 +7,8 @@
                     <h2 class="h2 text-center my-4">Modification du client </h2>
                     <form action="{{ url('/recherche/update/' . $editUser->numeroClient) }}" method="POST">
                         @csrf
-                        <div class="row">
-                            <div class="col-sm">
+                        <div class="row d-flex justify-center">
+                            <div class="col-xl col-md">
 
                                 <label for="nom">Nom</label>
                                 <input class="form-control mb-3 rounded-lg" type="text" name="nom" id="nom"
@@ -37,7 +37,7 @@
                             </div>
 
 
-                            <div class="col-sm">
+                            <div class="col-xl col-md">
                                 <label for="siren">SIREN</label>
                                 <input class="form-control mb-3 rounded-lg" type="text" name="siren" id="siren"
                                     value="{{ $editUser->siren }}">
@@ -55,7 +55,7 @@
                                     id="raisonSociale" value="{{ $editUser->raisonSociale }}">
 
                                 <label for="dureeDeplacement">Durée déplacement</label>
-                                <input class="form-control mb-3 rounded-lg" type="text" name="dureeDeplacement"
+                                <input class="form-control mb-3 rounded-lg" type="time" name="dureeDeplacement"
                                     id="dureeDeplacement" value="{{ $editUser->dureeDeplacement }}">
 
                                 <label for="distanceKm">Distance en KM</label>
@@ -64,8 +64,8 @@
 
 
 
-                            </div>
-                            <button class="btn text-white w-100 my-3 bg-primary" type="submit">Confirmer</button>
+                                </div>
+                                <button class="btn text-white my-3 bg-primary" style="width: 80%" type="submit">Confirmer</button>
                     </form>
                 </div>
             </div>

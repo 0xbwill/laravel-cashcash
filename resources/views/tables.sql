@@ -1,9 +1,13 @@
 INSERT INTO `users` (`id`, `name`, `surname`, `isTechnicien`, `email`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `qualification`, `adresse`, `dateObtention`, `dateEmbauche`, `numeroAgence`, `remember_token`, `email_verified_at`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-(1, 'William', 'DEGHESELLE', 1, '0xbwill@gmail.com', '$2y$10$HAldnBjcEWfJ/GfSrS/Fgu4OSIh3HzmTNljDmXAwMewSbBCv3Vf66', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 05:23:52', '2022-04-05 05:23:52'),
-(2, 'nico', 'VANDAMME', 1, 'nico@gmail.com', '$2y$10$Q7rLUxVu9y17KTrDGMBy.e7ao/uIj.gRGsmEo1SxhDMYwjlKyYcBK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, '2022-04-05 05:24:33', '2022-04-05 05:24:33'),
-(3, 'Rachad', 'RACHEDI', 1, 'rachad@gmail.com', '$2y$10$UMewrB25n.4Tx7BgW7PuruujFkeR5uK5GNCTwcT0PsmyMT1IPYALi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 07:54:14', '2022-04-05 07:54:14'),
-(4, 'Hugo', NULL, NULL, 'hugo@gmail.com', '$2y$10$nAGdn.B7IYppv.ATLagc3OacQcEKZpOXRS6ZuozS/PzFOdrF50qje', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 4, NULL, NULL, NULL, NULL, '2022-04-05 05:25:41', '2022-04-05 05:25:41'),
-(5, 'Mathéo', NULL, NULL, 'matheo@gmail.com', '$2y$10$TIUshnQ4kCeoY.ZxYV2x6O6ogUClAfknvFeKNGOD2fy5cxhfGboAO', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, '2022-04-05 05:26:05', '2022-04-05 05:26:05');
+(1, 'William', 'DEGHESELLE', 1, '0xbwill@gmail.com', '$2y$10$HAldnBjcEWfJ/GfSrS/Fgu4OSIh3HzmTNljDmXAwMewSbBCv3Vf66', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 03:23:52', '2022-04-05 03:23:52'),
+(2, 'nico', 'VANDAMME', 1, 'nico@gmail.com', '$2y$10$Q7rLUxVu9y17KTrDGMBy.e7ao/uIj.gRGsmEo1SxhDMYwjlKyYcBK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 03:24:33', '2022-04-05 03:24:33'),
+(3, 'Rachad', 'RACHEDI', 1, 'rachad@gmail.com', '$2y$10$UMewrB25n.4Tx7BgW7PuruujFkeR5uK5GNCTwcT0PsmyMT1IPYALi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 05:54:14', '2022-04-05 05:54:14'),
+(4, 'Hugo', 'NORMAND', NULL, 'hugo@gmail.com', '$2y$10$nAGdn.B7IYppv.ATLagc3OacQcEKZpOXRS6ZuozS/PzFOdrF50qje', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, '2022-04-05 03:25:41', '2022-04-05 03:25:41'),
+(5, 'Mathéo', 'CORREIA', NULL, 'matheo@gmail.com', '$2y$10$TIUshnQ4kCeoY.ZxYV2x6O6ogUClAfknvFeKNGOD2fy5cxhfGboAO', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, '2022-04-05 03:26:05', '2022-04-05 03:26:05'),
+(6, 'Pereira', 'RIOU', 1, 'Pereira@gmail.com', '$2y$10$oJEYNpB46uCTFnBEulK8zuec5rMsRiI0w63/Masa1s/J2Q.B0CwSa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3, NULL, NULL, NULL, NULL, '2022-04-05 11:06:16', '2022-04-05 11:06:16'),
+(7, 'Bryson', 'BERTHA', 1, 'Bryson@gmail.com', '$2y$10$bcaQTeT8y.jSw29ZzqwmNuhP2/95NSz88DPgn27Tv5PzI.TVn6xZG', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3, NULL, NULL, NULL, NULL, '2022-04-05 11:06:35', '2022-04-05 11:06:35'),
+(8, 'Reed', 'MARIA', 1, 'Reed@gmail.com', '$2y$10$Br.NYt7IuKPyHOCQC.K7heKURTabwkOMCcSVeDcrQafjytWsSWCBW', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, '2022-04-05 11:06:50', '2022-04-05 11:06:50'),
+(9, 'Sanches', 'JACKIE', 1, 'Sanches@gmail.com', '$2y$10$UGIHEgfIXiEJ4VO0pbfTuOZXHGR5/4fix9tBvcRATSXYoqLWEkXgK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, '2022-04-05 11:07:05', '2022-04-05 11:07:05');
 
 
 INSERT INTO `agences` (`numeroAgence`, `nomAgence`, `adresseAgence`, `telephoneAgence`) VALUES

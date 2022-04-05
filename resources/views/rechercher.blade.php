@@ -6,12 +6,13 @@
                 <strong> {{ session('success') }}</strong>
             </div>
         @endif
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="col-xl-11 mx-auto sm:px-6 lg:px-8">
             <div class="overflow-hidden sm:rounded-lg text-white mb-3">
                 <h2 class="h2 text-center">Résultat recherche</h2>
             </div>
 
             @if ($client->isNotEmpty())
+            <div class="table-responsive"> 
                 <table class="table border border-white text-white mt-2" style="background-color:#0e131c">
                     <thead>
                         <tr>
@@ -51,6 +52,7 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
             @else
                 <div class="d-flex justify-center">
                     <h3 class="h3 text-white text-center mt-3">Aucun résultat</h2><br>
