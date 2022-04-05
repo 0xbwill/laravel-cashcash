@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('siren')->nullable();
             $table->integer('numeroAgence')->nullable();
             $table->string('codeApe')->nullable();
-            $table->string('raisonSociale')->unique();
+            $table->string('raisonSociale')->nullable();
             $table->time('dureeDeplacement')->nullable();
             $table->integer('distanceKm')->nullable();
             $table->timestamps();
