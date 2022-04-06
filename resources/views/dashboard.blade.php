@@ -11,29 +11,36 @@
                 @if (Auth::user()->isTechnicien == 1)
                     <h2 class="h2 text-center">Accéder à une fiche client</h1>
 
-                    <div class="d-flex justify-center mt-3">
-                        <form action="{{ route('rechercher') }}" method="GET">
-                            <input class="text-dark rounded-lg" type="text" name="search" required
-                                placeholder="Entrez un numéro client" />
-                            <button type="submit" class="btn btn-primary ml-3">Rechercher</button>
-                        </form>
-                    </div>
-                @else
-                    <h1 class="h1 text-center">Liste des agences</h1>
-                    <div class="mt-3 d-flex justify-center">
-                        <form action="{{ route('selection.agence') }}" class="d-flex" style="width:60vh">
-                            <select name="selectAgence" id="" class="form-control">
-                                <option value="">Sélectionnez une agence</option>
-                                @foreach ($agences as $uneAgence)
-                                    <option value="{{ $uneAgence->numeroAgence }}">
-                                        {{ $uneAgence->numeroAgence . ' | ' . $uneAgence->nomAgence }}</option>
-                                @endforeach
-                            </select>
-                            <button type="submit" class="btn btn-primary ml-3">Confirmer</button>
-                        </form>
-                    </div>
-                @endif
+                        <div class="d-flex justify-center mt-3">
+                            <form action="{{ route('rechercher') }}" method="GET">
+                                <input class="text-dark rounded-lg" type="text" name="search" required
+                                    placeholder="Entrez un numéro client" />
+                                <button type="submit" class="btn btn-primary ml-3">Rechercher</button>
+                            </form>
+                        </div>
+                    @else
+                        <h4 class="h4 text-center">Liste des agences</h4>
+                        <div class="container mt-3">
+                            <div class="row d-flex justify-center">
+                                <div class="col-md-4">
+                                    <form action="{{ route('selection.agence') }}" class="d-flex">
+                                        <select name="selectAgence" id="" class="form-control">
+                                            <option value="">Sélectionnez une agence</option>
+                                            @foreach ($agences as $uneAgence)
+                                                <option value="{{ $uneAgence->numeroAgence }}">
+                                                    {{ $uneAgence->numeroAgence . ' | ' . $uneAgence->nomAgence }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                        <button type="submit" class="btn btn-primary ml-3">Confirmer</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    
             </div>
+            @endif
         </div>
+    </div>
     </div>
 </x-app-layout>

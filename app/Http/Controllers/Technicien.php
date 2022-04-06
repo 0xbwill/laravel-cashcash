@@ -40,7 +40,7 @@ class Technicien extends Controller
             ->orderBy('dateVisite', 'asc')
             ->get();
 
-        return view('liste-intervention', compact('mesInterventions'));
+        return view('techniciens/liste-intervention', compact('mesInterventions'));
     }
 
     public function filterInterventionClient()
@@ -53,7 +53,7 @@ class Technicien extends Controller
             ->orderBy('clients.numeroClient', 'asc')
             ->get();
 
-        return view('liste-intervention', compact('mesInterventions'));
+        return view('techniciens/liste-intervention', compact('mesInterventions'));
     }
 
     public function filterInterventionDistance()
@@ -66,7 +66,7 @@ class Technicien extends Controller
             ->orderBy('clients.distanceKm', 'asc')
             ->get();
 
-        return view('liste-intervention', compact('mesInterventions'));
+        return view('techniciens/liste-intervention', compact('mesInterventions'));
     }
 
     public function rechercheClient(Request $request)

@@ -31,6 +31,9 @@ Route::post('/interventions/valider/{id}', [Technicien::class, 'validerIntervent
 Route::get('/agence', [Gestionnaire::class, 'selectAgence'])->name('selection.agence');
 Route::get('/assigner/intervention/{numeroClient}', [Gestionnaire::class, 'newIntervention'])->name('assigner.intervention');
 Route::post('/insert/new/intervention', [Gestionnaire::class, 'insertNewIntervention'])->name('insert.intervention');
+Route::get('/gestion-techniciens', [Gestionnaire::class, 'showTechniciens'])->name('gestion.techniciens');
+Route::get('/gestion-techniciens/select', [Gestionnaire::class, 'selectTechnicien'])->name('selection.technicien');
+
 
 // PDF Generate
 Route::get('/generate-pdf/{id}', [PDFController::class, 'generatePDF']);

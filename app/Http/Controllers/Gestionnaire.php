@@ -28,6 +28,28 @@ class Gestionnaire extends Controller
         return view('gestionnaires/affecter-intervention', compact('agence', 'selectedAgence', 'listeClient'));
     }
 
+    public function selectTechnicien(Request $request)
+    {
+        $selectedTechnicien = $request->input('selectTechnicien');
+
+        $technicien = DB::table('users')
+            ->where('id', $selectedTechnicien)
+            ->get();
+
+        $interventionsTerminee = DB::table('intervention')
+        ->where('isValid', 1)
+        ->where('numeroIntervenant', $selectedTechnicien)
+        ->count();
+
+        $nombreKmParcouru = DB::table('intervention')
+        ->where('isValid', 1)
+        ->where('numeroIntervenant', $selectedTechnicien)
+        ->get();
+
+
+        return view('gestionnaires/techniciens-details', compact('technicien','interventionsTerminee'));
+    }
+
     public function newIntervention($numeroClient)
     {
 
@@ -57,5 +79,15 @@ class Gestionnaire extends Controller
             'success',
             'Intervention assignée avec succès !'
         );
+    }
+
+    public function showTechniciens()
+    {
+
+        $techniciens = DB::table('users')
+            ->where('isTechnicien', 1)
+            ->get();
+
+        return view('gestionnaires/gestion-techniciens', compact('techniciens'));
     }
 }
