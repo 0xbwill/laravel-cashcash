@@ -23,11 +23,6 @@ class Technicien extends Controller
             ->orderBy('clients.numeroClient', 'asc')
             ->get();
 
-        // $mesInterventions = DB::table('intervention')
-        //     ->where('numeroIntervenant', Auth::user()->id)
-        //     ->orderBy('dateVisite', 'asc')
-        //     ->get();
-
         return view('techniciens/liste-intervention', compact('mesInterventions'));
     }
 

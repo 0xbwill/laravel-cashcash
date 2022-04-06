@@ -37,17 +37,30 @@ class Gestionnaire extends Controller
             ->get();
 
         $interventionsTerminee = DB::table('intervention')
-        ->where('isValid', 1)
-        ->where('numeroIntervenant', $selectedTechnicien)
-        ->count();
+            ->where('isValid', 1)
+            ->where('numeroIntervenant', $selectedTechnicien)
+            ->count();
 
-        $nombreKmParcouru = DB::table('intervention')
-        ->where('isValid', 1)
-        ->where('numeroIntervenant', $selectedTechnicien)
-        ->get();
+        $nombreKmParcouru = DB::table('clients')
+            ->join('intervention', 'clients.numeroClient', '=', 'intervention.numeroClient')
+            ->select('clients.*', 'intervention.*')
+            ->where('isValid', 1)
+            ->where('numeroIntervenant', $selectedTechnicien)
+            ->sum('distanceKm');
 
+        // $dureeControle = DB::table('clients')
+        //     ->join('intervention', 'clients.numeroClient', '=', 'intervention.numeroClient')
+        //     ->select('clients.dureeDeplacement')
+        //     ->where('isValid', 1)->where('numeroIntervenant', $selectedTechnicien)
+        //     ->get();
 
-        return view('gestionnaires/techniciens-details', compact('technicien','interventionsTerminee'));
+        // foreach ($dureeControle as $uneDuree) {
+        //     $dureeFinale = '0:00:00';
+        //     $dureeFinale =+ $uneDuree->dureeDeplacement; 
+        // } 
+        
+
+        return view('gestionnaires/techniciens-details', compact('technicien', 'interventionsTerminee', 'nombreKmParcouru'));
     }
 
     public function newIntervention($numeroClient)
