@@ -23,7 +23,7 @@ class Gestionnaire extends Controller
         ->where('numeroAgence', $selectedAgence)
         ->get();
 
-        return view('affecter-intervention', compact('agence', 'selectedAgence', 'listeClient'));
+        return view('gestionnaires/affecter-intervention', compact('agence', 'selectedAgence', 'listeClient'));
     }
 
     public function newIntervention($numeroClient) {
@@ -35,7 +35,7 @@ class Gestionnaire extends Controller
         ->where('numeroAgence', $newIntervention->numeroAgence)
         ->get();
 
-        return view('new-intervention', compact('newIntervention', 'intervenants'));
+        return view('gestionnaires/new-intervention', compact('newIntervention', 'intervenants'));
 
     }
 

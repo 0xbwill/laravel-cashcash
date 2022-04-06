@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PDF;
-use Illuminate\Support\Arr;  
 
 class PDFController extends Controller
 {
@@ -89,12 +88,6 @@ class PDFController extends Controller
 	    ->latest()
         ->value('numeroClient');
 
-
-
-
-
-
-
         $data = [
             'title' => 'Fiche - Intervention'.' N°'.$id,
             'date' => date('d/m/Y'),
@@ -112,7 +105,7 @@ class PDFController extends Controller
             'distanceKm' => $distanceKm,
         ];
           
-        $pdf = PDF::loadView('myPDF', $data);
+        $pdf = PDF::loadView('techniciens/myPDF', $data);
     
         return $pdf->download('itsolutionstuff.pdf');
     }

@@ -20,7 +20,7 @@ class Technicien extends Controller
             ->join('intervention', 'clients.numeroClient', '=', 'intervention.numeroClient')
             ->select('clients.*', 'intervention.*')
             ->where('numeroIntervenant', Auth::user()->id)
-            ->orderBy('clients.distanceKm', 'asc')
+            ->orderBy('clients.numeroClient', 'asc')
             ->get();
 
         // $mesInterventions = DB::table('intervention')
@@ -28,7 +28,7 @@ class Technicien extends Controller
         //     ->orderBy('dateVisite', 'asc')
         //     ->get();
 
-        return view('liste-intervention', compact('mesInterventions'));
+        return view('techniciens/liste-intervention', compact('mesInterventions'));
     }
 
     public function filterInterventionDate()
@@ -78,7 +78,7 @@ class Technicien extends Controller
             ->where('numeroClient', $client)
             ->get();
 
-        return view('rechercher', compact('client'));
+        return view('techniciens/rechercher', compact('client'));
     }
 
     public function editRecherche($numeroClient)
@@ -88,7 +88,7 @@ class Technicien extends Controller
             ->where('numeroClient', $numeroClient)
             ->first();
 
-        return view('rechercher-modif', compact('editUser'));
+        return view('techniciens/rechercher-modif', compact('editUser'));
     }
 
     public function updateRecherche(Request $request, $numeroClient)
