@@ -23,7 +23,8 @@
                         <div class="container mt-3">
                             <div class="row d-flex justify-center">
                                 <div class="col-md-4">
-                                    <form action="{{ route('selection.agence') }}" class="d-flex">
+                                    <form action="{{ route('selection.agence') }}" class="d-flex" method="GET">
+                                        @csrf
                                         <select name="selectAgence" id="" class="form-control">
                                             <option value="">Sélectionnez une agence</option>
                                             @foreach ($agences as $uneAgence)
