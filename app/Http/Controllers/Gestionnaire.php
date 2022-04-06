@@ -46,6 +46,7 @@ class Gestionnaire extends Controller
         $data['dateVisite'] = $request->dateVisite;
         $data['heureVisite'] = $request->heureVisite;
         $data['numeroClient'] = $request->numeroClient;
+        $data['tel'] = $request->tel;
 
         DB::table('intervention')->insert($data);
       

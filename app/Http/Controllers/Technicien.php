@@ -9,18 +9,65 @@ use Illuminate\Support\Facades\DB;
 class Technicien extends Controller
 {
 
-    public function __construct() {
-		$this->middleware('auth:sanctum');
-	}
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum');
+    }
 
-    public function listeInterventions() {
-        $mesInterventions = DB::table('intervention')
-        ->where('numeroIntervenant', Auth::user()->id)
-        ->get();
+    public function listeInterventions()
+    {
+        $mesInterventions = DB::table('clients')
+            ->join('intervention', 'clients.numeroClient', '=', 'intervention.numeroClient')
+            ->select('clients.*', 'intervention.*')
+            ->where('numeroIntervenant', Auth::user()->id)
+            ->orderBy('clients.distanceKm', 'asc')
+            ->get();
+
+        // $mesInterventions = DB::table('intervention')
+        //     ->where('numeroIntervenant', Auth::user()->id)
+        //     ->orderBy('dateVisite', 'asc')
+        //     ->get();
 
         return view('liste-intervention', compact('mesInterventions'));
     }
 
+    public function filterInterventionDate()
+    {
+        $mesInterventions = DB::table('clients')
+            ->join('intervention', 'clients.numeroClient', '=', 'intervention.numeroClient')
+            ->select('clients.*', 'intervention.*')
+            ->where('numeroIntervenant', Auth::user()->id)
+            ->orderBy('dateVisite', 'asc')
+            ->get();
+
+        return view('liste-intervention', compact('mesInterventions'));
+    }
+
+    public function filterInterventionClient()
+    {
+
+        $mesInterventions = DB::table('clients')
+            ->join('intervention', 'clients.numeroClient', '=', 'intervention.numeroClient')
+            ->select('clients.*', 'intervention.*')
+            ->where('numeroIntervenant', Auth::user()->id)
+            ->orderBy('clients.numeroClient', 'asc')
+            ->get();
+
+        return view('liste-intervention', compact('mesInterventions'));
+    }
+
+    public function filterInterventionDistance()
+    {
+
+        $mesInterventions = DB::table('clients')
+            ->join('intervention', 'clients.numeroClient', '=', 'intervention.numeroClient')
+            ->select('clients.*', 'intervention.*')
+            ->where('numeroIntervenant', Auth::user()->id)
+            ->orderBy('clients.distanceKm', 'asc')
+            ->get();
+
+        return view('liste-intervention', compact('mesInterventions'));
+    }
 
     public function rechercheClient(Request $request)
     {
@@ -67,5 +114,9 @@ class Technicien extends Controller
             'success',
             'Utilisateur mis à jour avec succès !'
         );
+    }
+
+    public function validerIntervention($id) {
+        
     }
 }

@@ -19,6 +19,9 @@
                     <label for="heureVisite">Heure visite :</label>
                     <input class="form-control mb-4" type="time" name="heureVisite" id="heureVisite">
                     
+                    <input type="hidden" name="tel" id="tel" value="{{ $newIntervention->tel }}">
+
+                    
                     <button class="btn btn-primary mt-3" type="submit">Confirmer</button>
                     <input name="numeroClient" type="hidden" value="{{ $newIntervention->numeroClient }}">
                 </form>
