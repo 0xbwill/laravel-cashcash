@@ -7,39 +7,42 @@ use Illuminate\Support\Facades\DB;
 
 class Gestionnaire extends Controller
 {
-    public function __construct() {
-		$this->middleware('auth:sanctum');
-	}
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum');
+    }
 
-    public function selectAgence(Request $request) {
+    public function selectAgence(Request $request)
+    {
 
         $selectedAgence = $request->input('selectAgence');
 
         $agence = DB::table('agences')
-        ->where('numeroAgence', $selectedAgence)
-        ->get();
+            ->where('numeroAgence', $selectedAgence)
+            ->get();
 
         $listeClient = DB::table('clients')
-        ->where('numeroAgence', $selectedAgence)
-        ->get();
+            ->where('numeroAgence', $selectedAgence)
+            ->get();
 
         return view('gestionnaires/affecter-intervention', compact('agence', 'selectedAgence', 'listeClient'));
     }
 
-    public function newIntervention($numeroClient) {
+    public function newIntervention($numeroClient)
+    {
 
         $newIntervention = DB::table('clients')->where('numeroClient', $numeroClient)->first();
 
         $intervenants = DB::table('users')
-        ->where('isTechnicien', 1)
-        ->where('numeroAgence', $newIntervention->numeroAgence)
-        ->get();
+            ->where('isTechnicien', 1)
+            ->where('numeroAgence', $newIntervention->numeroAgence)
+            ->get();
 
         return view('gestionnaires/new-intervention', compact('newIntervention', 'intervenants'));
-
     }
 
-    public function insertNewIntervention(Request $request) {
+    public function insertNewIntervention(Request $request)
+    {
 
         $data = array();
         $data['numeroIntervenant'] = $request->numeroIntervenant;
@@ -49,9 +52,10 @@ class Gestionnaire extends Controller
         $data['tel'] = $request->tel;
 
         DB::table('intervention')->insert($data);
-      
-        return redirect()->route('dashboard')->with('success', 
-        'Intervention assignée avec succès !');
 
+        return redirect()->route('dashboard')->with(
+            'success',
+            'Intervention assignée avec succès !'
+        );
     }
 }
