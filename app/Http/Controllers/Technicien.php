@@ -116,7 +116,15 @@ class Technicien extends Controller
         );
     }
 
-    public function validerIntervention($id) {
+
+    public function validerIntervention(Request $request, $id) {
+
+        $data = array();
+        $data['commentaire'] = $request->commentaire;
+        $data['isValid'] = 1;
         
+        DB::table('intervention')->where('id',$id)->update($data);
+
+        return redirect()->route('interventions')->with('success', 'Intervention confirmée avec succès.');
     }
 }

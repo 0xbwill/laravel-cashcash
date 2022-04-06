@@ -20,6 +20,7 @@ return new class extends Migration
             $table->time('heureVisite');
             $table->integer('numeroClient');
             $table->boolean('isValid')->nullable();
+            $table->string('commentaire')->nullable();
             $table->string('tel')->nullable();
         });    }
 

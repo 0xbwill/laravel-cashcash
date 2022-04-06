@@ -77,35 +77,79 @@
 
 
 
-                                        
-                                        <!-- Button Modal -->
-                                        <button type="button" class="mx-1 btn btn-success w-100 mb-2"
-                                            data-toggle="modal" data-target="#popupValidation{{$uneIntervention->id}}">
-                                            Validé
-                                        </button>
 
+                                        <!-- Button Modal -->
+                                        @if ($uneIntervention->isValid == 1)
+                                        <button class="mx-1 btn btn-success w-100 mb-2" 
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#popupCommentaire{{ $uneIntervention->id }}">
+                                            Intervention validée
+                                        </button>
                                         <!-- Modal -->
-                                        <div class="modal fade" id="popupValidation{{$uneIntervention->id}}" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal fade" id="popupCommentaire{{ $uneIntervention->id }}"
+                                            tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                            aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
+                                                <div class="modal-content border" style="background-color: #0e131c">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal
-                                                            title</h5>
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">
+                                                            Confirmation de l'intervention
+                                                            n°{{ $uneIntervention->id }}
+                                                        </h5>
                                                         <button type="button" class="close"
-                                                            data-dismiss="modal" aria-label="Close">
+                                                            data-bs-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        ...
+                                                        <form action="{{ url('/interventions/valider/'.$uneIntervention->id) }}" method="POST">
+                                                            @csrf
+                                                            <div class="form-group">
+                                                                <label for="commentaire" class="form-label">Commentaire</label>
+                                                                <input class="form-control rounded-lg" id="commentaire" name="commentaire" type="text" value="{{$uneIntervention->commentaire}}" required>
+                                                            </div>
+
+                                                    </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @else
+                                        <button type="button" class="mx-1 btn btn-success w-100 mb-2"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#popupValidation{{ $uneIntervention->id }}">
+                                            Valider
+                                        </button>
+                                        @endif
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="popupValidation{{ $uneIntervention->id }}"
+                                            tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border" style="background-color: #0e131c">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">
+                                                            Confirmation de l'intervention
+                                                            n°{{ $uneIntervention->id }}
+                                                        </h5>
+                                                        <button type="button" class="close"
+                                                            data-bs-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="{{ url('/interventions/valider/'.$uneIntervention->id) }}" method="POST">
+                                                            @csrf
+                                                            <div class="form-group">
+                                                                <label for="commentaire" class="form-label">Commentaire</label>
+                                                                <input class="form-control rounded-lg" id="commentaire" name="commentaire" type="text" required>
+                                                            </div>
+
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save
-                                                            changes</button>
+                                                        <button type="submit" class="btn btn-primary">Confirmer</button>
                                                     </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
