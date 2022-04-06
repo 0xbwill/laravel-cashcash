@@ -15,9 +15,9 @@
                                         @foreach ($technicien as $unTechnicien)
                                             <h4 class="h5">Technicien selectionné :
                                                 {{ $unTechnicien->name . ' ' . $unTechnicien->surname }}</h4>
-                                            <br>
                                         @endforeach
                                     </h5>
+                                    <p class="card-text">{{ 'Intervention(s) en cours : ' . $interventionsEnCours }}</p><br>
                                     <p class="card-text">{{ 'Intervention(s) terminée(s) : ' . $interventionsTerminee }}</p>
                                     <p class="card-text">{{ 'Nombre de kilomètres parcourus : '.$nombreKmParcouru.' km'}}</p>
                                     {{-- <p class="card-text">{{ 'Temps total : '.$dureeControle}}</p> --}}
