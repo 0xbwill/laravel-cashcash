@@ -22,9 +22,9 @@ Route::get('/rechercher', [Technicien::class, 'rechercheClient'])->name('recherc
 Route::get('/recherche/modifier/{numeroClient}', [Technicien::class, 'editRecherche'])->name('modifier.rechercher');
 Route::post('/recherche/update/{numeroClient}', [Technicien::class, 'updateRecherche'])->name('update.rechercher');
 Route::get('/interventions', [Technicien::class, 'listeInterventions'])->name('interventions');
-Route::post('/interventions/date', [Technicien::class, 'filterInterventionDate'])->name('interventions.filter.date');
-Route::post('/interventions/client', [Technicien::class, 'filterInterventionClient'])->name('interventions.filter.client');
-Route::post('/interventions/distance', [Technicien::class, 'filterInterventionDistance'])->name('interventions.filter.distance');
+Route::get('/interventions/date', [Technicien::class, 'filterInterventionDate'])->name('interventions.filter.date');
+Route::get('/interventions/client', [Technicien::class, 'filterInterventionClient'])->name('interventions.filter.client');
+Route::get('/interventions/distance', [Technicien::class, 'filterInterventionDistance'])->name('interventions.filter.distance');
 Route::post('/interventions/valider/{id}', [Technicien::class, 'validerIntervention'])->name('interventions.valider');
 
 // Routes pour les gestionnaires

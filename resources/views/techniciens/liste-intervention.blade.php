@@ -14,21 +14,21 @@
                 <section class="">
 
                     <div class="d-flex mx-5 justify-center">
-                        <form action="{{ route('interventions.filter.date') }}" method="POST">
+                        <form action="{{ route('interventions.filter.date') }}" method="GET">
                             @csrf
                             <button type="submit" class="btn btn-primary ml-4 mb-4" data-toggle="button"
                                 aria-pressed="false" autocomplete="off">
                                 Trier par date
                             </button>
                         </form>
-                        <form action="{{ route('interventions.filter.client') }}" method="POST">
+                        <form action="{{ route('interventions.filter.client') }}" method="GET">
                             @csrf
                             <button type="submit" class="btn btn-primary ml-4 mb-4" data-toggle="button"
                                 aria-pressed="false" autocomplete="off">
                                 Trier par client
                             </button>
                         </form>
-                        <form action="{{ route('interventions.filter.distance') }}" method="POST">
+                        <form action="{{ route('interventions.filter.distance') }}" method="GET">
                             @csrf
                             <button type="submit" class="btn btn-primary ml-4 mb-4" data-toggle="button"
                                 aria-pressed="false" autocomplete="off">
