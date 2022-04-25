@@ -2,6 +2,7 @@
   
 namespace App\Http\Controllers;
   
+use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PDF;
@@ -90,7 +91,7 @@ class PDFController extends Controller
 
         $data = [
             'title' => 'Fiche - Intervention'.' N°'.$id,
-            'date' => date('d/m/Y'),
+            'today' => Carbon::today(),
             'dateVisite' => $dateVisiteIntervention,
             'heureVisite' => $heureVisiteIntervention,
             'idTechnicien' => $idTechnicien,

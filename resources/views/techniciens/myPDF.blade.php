@@ -7,7 +7,7 @@
 
 <body>
     <h1>{{ $title }}</h1>
-    <p>Fiche PDF générée le : {{ \Carbon\Carbon::parse($date)->format('d/m/Y')}}</p><br>
+    <p>Fiche PDF générée le : {{ Carbon\Carbon::parse($today)->format('d/m/Y')}}</p><br>
 
     <p>Numéro technicien : {{ $idTechnicien }}</p>
 
