@@ -1,64 +1,43 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Contexte
 
-## About Laravel
+La société CASHCASH possède 57 agences sur le territoire national. On comprend bien que le nombre d’interventions à gérer sera très important. De plus, chaque client étant rattaché à une agence, la société CASHCASH privilégie la proximité lors des déplacements. Par ailleurs, la réactivité de la société CASHCASH est essentielle pour assurer la confiance qui la lie à ses clients. Son système d’information doit donc pouvoir gérer un maximum d’informations sur les interventions. Une application web a été choisie puisqu’elle permet de s’adapter à l’hétérogénéité des solutions techniques d'accès (STA) des salariés.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Cela peut être aussi bien des smartphones, des PC plus
+ou moins performants, des tablettes. Enfin, ces STA fonctionnent sur des systèmes d’exploitation différents (Windows, Linux, Androïd…).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Application
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+VDEV fournit des solutions adaptative (responsive).
+Par ailleurs, VDEV améliore sans cesse l’ergonomie et l’attractivité des solutions web. Vous devez faciliter les saisies avec par exemple des champs auto complétés. Enfin,vous devez utiliser des contrôles graphiques modernes comme les DatePicker. Fort de leur expérience dans le développement, les responsables de VDEV vous suggèrent d’utiliser les technologies suivantes : Javascript, Ajax, JQuery. 
 
-## Learning Laravel
+VDEV souhaite retrouver les spécifications et contraintes techniques suivantes :
+- Une règle de nommage des variables
+- Un diagramme de cas d’utilisation
+- Une description textuelle des cas d’utilisation
+- Un maquettage des IHM (les composants doivent être nommés)
+- Le choix des Architecture logicielles retenues
+- Une Charte graphique
+- La compatibilité avec différents navigateurs.
+- La visualisation correcte des informations sur terminaux mobiles
+- Rapport de tests
+- Un code commenté
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+VDEV souhaiterait développer idéalement ses solutions web sur un modèle MVC
+(Modèle-Vue-Contrôleur) avec les nouvelles recommandations en matière de
+séparation des couches (HTML, CSS, JavaScript).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Contraintes à respecter
 
-## Laravel Sponsors
+- Les gestionnaires et les techniciens doivent pouvoir se connecter à leurs espaces avec un mot de passe sécurisé.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Une fois connecté le gestionnaire peut affecter des visites à un technicien et visualiser les informations grâce à un outil.
 
-### Premium Partners
+- Le technicien après s’être connecté peut rechercher une fiche client avec le numéro client et visualiser ou modifier la fiche.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Le technicien peut générer une fiche d'intervention au format PDF.
 
-## Contributing
+- Le technicien doit pouvoir consulter les interventions par date ou par agent et par la suite éditer la fiche intervention.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Les techniciens peuvent consulter les interventions qui leur sont affectées et les valider avec un commentaire et le temps passé.
