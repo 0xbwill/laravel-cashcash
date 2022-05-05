@@ -1,5 +1,5 @@
 <x-guest-layout>
-    
+
     <!DOCTYPE html>
     <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -22,26 +22,29 @@
             <h1 class="mb-3 text-white">Bienvenu chez O'Malley</h1>
 
             @Auth
-            <a href="{{ route('login') }}"><button type="button" class="border rounded px-3 py-2 text-white">Accéder à mon espace</button></a>
+                <a href="{{ route('login') }}"><button type="button" class="border rounded px-3 py-2 text-white">Accéder à
+                        mon espace</button></a>
             @else
-            <a href="{{ route('login') }}"><button type="button" class="border rounded px-3 py-2 text-white">Je me connecte</button></a>
-            <a href="{{ route('register') }}"><button type="button" class="border rounded px-3 py-2 text-white">Je m'inscris</button></a>
-            @endif
+                <a href="{{ route('login') }}"><button type="button" class="border rounded px-3 py-2 text-white">Je me
+                        connecte</button></a>
+                <a href="{{ route('register') }}"><button type="button" class="border rounded px-3 py-2 text-white">Je
+                        m'inscris</button></a>
+                @endif
 
 
-        </section>
-        
-    </body>
+            </section>
 
-    </html>
+        </body>
 
-</x-guest-layout>
+        </html>
 
-<style scoped>
-    body {
-        background-color: #0e131c;
-        margin: 0;
-        padding: 0;
-    }
+    </x-guest-layout>
 
-</style>
+    <style scoped>
+        body {
+            background-color: #0e131c;
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
