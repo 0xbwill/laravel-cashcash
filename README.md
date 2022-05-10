@@ -48,3 +48,5 @@ Route::get('/[url-personnalisé]', [[Nom-du-controlleur]::class, '[nom-de-la-fon
 // pour l'appeler plus facilement
 ->name('rechercher');
 ```
+
+<img src="mvc.png">
