@@ -64,6 +64,11 @@ class Technicien extends Controller
         return view('techniciens/liste-intervention', compact('mesInterventions'));
     }
 
+
+
+
+
+
     public function rechercheClient(Request $request)
     {
 
@@ -75,6 +80,12 @@ class Technicien extends Controller
 
         return view('techniciens/rechercher', compact('client'));
     }
+
+
+
+
+
+
 
     public function editRecherche($numeroClient)
     {
@@ -103,6 +114,7 @@ class Technicien extends Controller
         $data['dureeDeplacement'] = $request->dureeDeplacement;
         $data['distanceKm'] = $request->distanceKm;
 
+        // Mets à jours les données du clients dans la table
         DB::table('clients')->where('numeroClient', $numeroClient)->update($data);
 
         return redirect()->route('dashboard')->with(

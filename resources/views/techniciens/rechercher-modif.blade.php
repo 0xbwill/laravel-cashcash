@@ -61,9 +61,6 @@
                                 <label for="distanceKm">Distance en KM</label>
                                 <input class="form-control mb-3 rounded-lg" type="text" name="distanceKm"
                                     id="distanceKm" value="{{ $editUser->distanceKm }}">
-
-
-
                                 </div>
                                 <button class="btn text-white my-3 bg-primary" style="width: 80%" type="submit">Confirmer</button>
                     </form>

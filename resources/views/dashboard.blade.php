@@ -12,11 +12,15 @@
                     <h2 class="h2 text-center">Accéder à une fiche client</h1>
 
                         <div class="d-flex justify-center mt-3">
+
+
                             <form action="{{ route('rechercher') }}" method="GET">
                                 <input class="text-dark rounded-lg" type="text" name="search" required
                                     placeholder="Entrez un numéro client" />
                                 <button type="submit" class="btn btn-primary ml-3">Rechercher</button>
                             </form>
+
+                            
                         </div>
                     @else
                         <h4 class="h4 text-center">Liste des agences</h4>
