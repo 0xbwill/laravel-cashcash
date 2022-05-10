@@ -13,6 +13,7 @@
                         <div class="col-md-4">
                             <form action="{{ route('selection.technicien') }}" method="GET" class="d-flex">
                                 @csrf
+                                 {{-- Permet de selectionner un technicien grâce à son ID --}}
                                 <select name="selectTechnicien" id="selectTechnicien" class="form-control">
                                     <option value="">Sélectionnez un technicien</option>
                                     @foreach ($techniciens as $unTechnicien)
