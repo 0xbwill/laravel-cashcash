@@ -11,7 +11,9 @@
                 <h2 class="h2 text-center">Résultat recherche</h2>
             </div>
 
+            {{-- Vérification que la variable $client n'est pas vide, si elle ne l'est pas pour afficher le formulaire de modification --}}
             @if ($client->isNotEmpty())
+        
             <div class="table-responsive"> 
                 <table class="table border border-white text-white mt-2 text-center" style="background-color:#0e131c">
                     <thead>
@@ -33,6 +35,7 @@
                     </thead>
                     <tbody>
                         <tr>
+                             {{-- Permet de faire une boucle sur la variable $client et d'afficher toutes les infos du client --}}
                             @foreach ($client as $unClient)
                                 <td>{{ $unClient->numeroClient }}</p>
                                 <td>{{ $unClient->nom }}</p>

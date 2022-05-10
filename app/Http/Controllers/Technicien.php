@@ -64,28 +64,19 @@ class Technicien extends Controller
         return view('techniciens/liste-intervention', compact('mesInterventions'));
     }
 
-
-
-
-
-
     public function rechercheClient(Request $request)
     {
-
+        // On stock dans $client la valeur saisie dans l'input
         $client = $request->input('search');
 
+        // On réecris dans $client, un tableau contenant les détails du client recherché
         $client = DB::table('clients')
             ->where('numeroClient', $client)
             ->get();
 
+        // On retourne la vue 'rechercher.blade.php' se trouvant dans le répertoire 'view/techniciens/'
         return view('techniciens/rechercher', compact('client'));
     }
-
-
-
-
-
-
 
     public function editRecherche($numeroClient)
     {

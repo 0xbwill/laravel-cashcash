@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PDFController;
 
-
 Route::get('/', function () {
     return view('index');
 });
@@ -34,6 +33,5 @@ Route::post('/insert/new/intervention', [Gestionnaire::class, 'insertNewInterven
 Route::get('/gestion-techniciens', [Gestionnaire::class, 'showTechniciens'])->name('gestion.techniciens');
 Route::get('/gestion-techniciens/select', [Gestionnaire::class, 'selectTechnicien'])->name('selection.technicien');
 
-
-// PDF Generate
+// Route pour la génération du PDF
 Route::get('/generate-pdf/{id}', [PDFController::class, 'generatePDF']);
