@@ -58,12 +58,12 @@ INSERT INTO `intervention` (`id`, `dateVisite`, `heureVisite`, `numeroClient`, `
 INSERT INTO `materiel` (`numeroDeSerie`, `dateDeVente`, `dateInstallation`, `prixVente`, `emplacement`, `refInterne`, `numeroClient`, `numeroContrat`) VALUES
 (2000, '2021-11-28', '2021-12-01', 60, 'cuisine', 1, 8, 1),
 (2001, '2021-10-27', '2021-10-30', 130, 'cuisine', 2, 7, 2),
-(2003, '2021-07-04', '2021-07-07', 45, 'salon', 3, 6, 3),
-(2004, '2021-06-13', '2021-06-16', 156, 'cuisine', 2, 5, 4);
-(2000, '2021-02-01', '2021-02-04', 60, 'cuisine', 1, 5, 5),
-(2001, '2021-05-23', '2021-05-26', 130, 'cuisine', 2, 3, 6),
-(2003, '2021-09-08', '2021-09-11', 45, 'salon', 3, 2, 7),
-(2004, '2021-01-09', '2021-09-12', 156, 'cuisine', 2, 1, 8);
+(2002, '2021-07-04', '2021-07-07', 45, 'salon', 3, 6, 3),
+(2003, '2021-06-13', '2021-06-16', 156, 'cuisine', 2, 5, 4),
+(2004, '2021-02-01', '2021-02-04', 60, 'cuisine', 1, 5, 5),
+(2005, '2021-05-23', '2021-05-26', 130, 'cuisine', 2, 3, 6),
+(2006, '2021-09-08', '2021-09-11', 45, 'salon', 3, 2, 7),
+(2007, '2021-01-09', '2021-09-12', 156, 'cuisine', 2, 1, 8);
 
 INSERT INTO `type_contrat` (`refTypeContrat`, `detailIntervention`, `tauxApplicable`) VALUES
 (1, '2021-11-03', 0.15),
