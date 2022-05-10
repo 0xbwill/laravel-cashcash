@@ -35,3 +35,4 @@ Route::get('/gestion-techniciens/select', [Gestionnaire::class, 'selectTechnicie
 
 // Route pour la génération du PDF
 Route::get('/generate-pdf/{id}', [PDFController::class, 'generatePDF']);
+Route::get('/generate-other-pdf/{id}', [PDFController::class, 'generatePDFother']);

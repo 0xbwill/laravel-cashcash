@@ -1,3 +1,4 @@
+{{-- Structure du PDF, utilisation des variables que l'on a défini dans le contrôleur PDFController.php --}}
 <!DOCTYPE html>
 <html>
 

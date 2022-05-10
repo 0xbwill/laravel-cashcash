@@ -75,6 +75,12 @@
                                                 style="background-color: #003d69;border:none"
                                                 href="{{ url('/generate-pdf/' . $uneIntervention->id) }}">
                                                 Générer PDF</a>
+                                            {{-- <a class="mx-1 btn btn-success w-100"
+                                                style="background-color: #003d69;border:none"
+                                                href="{{ url('/generate-other-pdf/' . $uneIntervention->id) }}">
+                                                Générer Other PDF</a> --}}
+
+
                                         </div>
                                         <div class="d-flex justify-center mb-2">
                                             <!-- Button Modal -->
