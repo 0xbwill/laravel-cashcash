@@ -148,7 +148,7 @@
                     @else 
                     <x-jet-nav-link class="ml-3" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         <p class="h4">{{ __('Agences') }}</p>
-                    </x-jet-nav-link>
+                    </x-jet-nav-link><br>
                     <x-jet-nav-link class="ml-3" href="{{ route('gestion.techniciens') }}" :active="request()->routeIs('gestion.techniciens')">
                         <p class="h4">{{ __('Gestion techniciens') }}</p>
                     </x-jet-nav-link>
