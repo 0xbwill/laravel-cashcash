@@ -64,6 +64,28 @@ class Technicien extends Controller
         return view('techniciens/liste-intervention', compact('mesInterventions'));
     }
 
+    //Fonction recherche matériel
+    public function rechercheMateriel(Request $request2)
+    {
+        // On stock dans $materiel la valeur saisie dans l'input
+        $materiel = $request2->input('search');
+
+        // On réecris dans $materiel, un tableau contenant les détails du client recherché
+        $materiel = DB::table('materielreseau')
+            ->join('materiel', 'materielreseau.NumeroSerie', '=', 'materiel.numeroDeSerie')
+            ->select('materielreseau.*', 'materiel.*')
+            ->where('NumeroSerie', $materiel)
+            ->get();
+
+        // On retourne la vue 'info-materiel-reseau' se trouvant dans le répertoire 'view/techniciens/'
+        return view('techniciens/info-materiel-reseau', compact('materiel'));
+    }
+    //Fin Fonction recherche matériel
+
+
+    
+
+    //Fonction de recherche client
     public function rechercheClient(Request $request)
     {
         // On stock dans $client la valeur saisie dans l'input
@@ -77,6 +99,7 @@ class Technicien extends Controller
         // On retourne la vue 'rechercher.blade.php' se trouvant dans le répertoire 'view/techniciens/'
         return view('techniciens/rechercher', compact('client'));
     }
+    //Fin fonction recherche client
 
     public function editRecherche($numeroClient)
     {

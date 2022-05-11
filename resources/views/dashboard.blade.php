@@ -22,6 +22,22 @@
 
                             
                         </div>
+                        
+                        <!-- Section recherche numero de serie pour les matériels -->
+                        <h2 class="h2 text-center mt-5">Accéder à une fiche matériels réseaux</h1>
+
+                        <div class="d-flex justify-center mt-3">
+
+
+                            <form action="{{ route('rechercherMateriel') }}" method="GET">
+                                <input class="text-dark rounded-lg" type="text" name="search" required
+                                    placeholder="Recherche de matériel" />
+                                <button type="submit" class="btn btn-primary ml-3">Rechercher</button>
+                            </form>
+
+                            
+                        </div>
+                        <!-- Fin section recherche numero de serie pour les matériels -->
                     @else
                         <h4 class="h4 text-center">Liste des agences</h4>
                         <div class="container mt-3">

@@ -18,6 +18,9 @@ Route::get('/dashboard', function () {
 
 // Route pour les techniciens
 Route::get('/rechercher', [Technicien::class, 'rechercheClient'])->name('rechercher');
+//route fonction recherche de materiel réseau
+Route::get('/info-materiel-reseau', [Technicien::class, 'rechercheMateriel'])->name('rechercherMateriel');
+//fin route fonction recherche de materiel reseau
 Route::get('/recherche/modifier/{numeroClient}', [Technicien::class, 'editRecherche'])->name('modifier.rechercher');
 Route::post('/recherche/update/{numeroClient}', [Technicien::class, 'updateRecherche'])->name('update.rechercher');
 Route::get('/interventions', [Technicien::class, 'listeInterventions'])->name('interventions');
