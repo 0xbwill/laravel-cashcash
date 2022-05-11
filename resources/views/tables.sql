@@ -64,17 +64,33 @@ INSERT INTO `intervention` (`id`, `dateVisite`, `heureVisite`, `numeroClient`, `
 (14, '2021-11-23', '02:00:00', 2, 5, '06 54 89 24 51'),
 (15, '2021-11-23', '02:00:00', 8, 5, '06 54 89 24 51');
 
-INSERT INTO `materiel` (`numeroDeSerie`, `dateDeVente`, `dateInstallation`, `prixVente`, `emplacement`, `refInterne`, `numeroClient`, `numeroContrat`) VALUES
-(2000, '2021-11-28', '2021-12-01', 60, 'cuisine', 1, 8, 1),
-(2001, '2021-10-27', '2021-10-30', 130, 'cuisine', 2, 7, 2),
-(2002, '2021-07-04', '2021-07-07', 45, 'salon', 3, 6, 3),
-(2003, '2021-06-13', '2021-06-16', 156, 'cuisine', 2, 5, 4),
-(2004, '2021-02-01', '2021-02-04', 60, 'cuisine', 1, 5, 5),
-(2005, '2021-05-23', '2021-05-26', 130, 'cuisine', 2, 3, 6),
-(2006, '2021-09-08', '2021-09-11', 45, 'salon', 3, 2, 7),
-(2007, '2021-01-09', '2021-09-12', 156, 'cuisine', 2, 1, 8);
+INSERT INTO `materiel` (`numeroDeSerie`, `dateDeVente`, `dateInstallation`, `prixVente`, `emplacement`, `refInterne`, `numeroClient`, `numeroContrat`, `OS`, `OSVersion` ) VALUES
+(2000, '2021-11-28', '2021-12-01', 60, 'cuisine', 1, 8, 1, 'Windows', '20H2'),
+(2001, '2021-10-27', '2021-10-30', 130, 'cuisine', 2, 7, 2, 'Windows', '19H3'),
+(2002, '2021-07-04', '2021-07-07', 45, 'salon', 3, 6, 3, 'Windows', '21H1'),
+(2003, '2021-06-13', '2021-06-16', 156, 'cuisine', 2, 5, 4, 'Linux', 'Ubuntu 20.04'),
+(2004, '2021-02-01', '2021-02-04', 60, 'cuisine', 1, 5, 5, 'Linux', 'Ubuntu 19.04'),
+(2005, '2021-05-23', '2021-05-26', 130, 'cuisine', 2, 3, 6, 'Linux', 'Ubuntu 17.04'),
+(2006, '2021-09-08', '2021-09-11', 45, 'salon', 3, 2, 7, 'MacOs', 'Monterey'),
+(2007, '2021-01-09', '2021-09-12', 156, 'cuisine', 2, 1, 8, 'MacOs', 'BigSur');
 
 INSERT INTO `type_contrat` (`refTypeContrat`, `detailIntervention`, `tauxApplicable`) VALUES
 (1, '2021-11-03', 0.15),
 (2, '2021-11-02', 0.2),
 (3, '2021-11-01', 0.1);
+
+INSERT INTO `failleSecurite` (`id`, `nomDeLaFaille`, `correctifFaille`, `dateDuCorrectif`) VALUES 
+('1', 'Faille réglages Windows', 'Fixed Update 2782H1', '2022-05-20'),
+('2', 'Faille réglages Linux', 'Fixed Update 232H3', '2022-06-20'),
+('3', 'Faille réglages MacOS', 'Fixed Update 897H23', '2022-07-20'),
+('4', 'Faille réglages Ubuntu', 'Fixed Update 0986HG', '2022-08-20'),
+('5', 'Faille réglages RedHat', 'Fixed Update 2321H3', '2022-09-20');
+
+INSERT INTO `controllerFaille` (`NumeroDeSerie`, `idFaille`) VALUES
+ ('2000', '1'),
+ ('2001', '2'),
+ ('2003', '3'),
+ ('2004', '4'),
+ ('2005', '5'),
+ ('2006', '5'),
+ ('2007', '5');

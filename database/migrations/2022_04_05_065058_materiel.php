@@ -22,6 +22,9 @@ return new class extends Migration
             $table->integer('refInterne');
             $table->integer('numeroClient');
             $table->integer('numeroContrat');
+            $table->string('OS')->nullable();
+            $table->string('OSVersion')->nullable();
+            $table->integer('failleSecurite')->nullable();
         });
     }
 

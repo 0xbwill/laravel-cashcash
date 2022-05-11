@@ -65,7 +65,7 @@ class Gestionnaire extends Controller
         // } 
 
 
-        return view('gestionnaires/techniciens-details', compact('technicien', 'interventionsTerminee', 'nombreKmParcouru','interventionsEnCours'));
+        return view('gestionnaires/techniciens-details', compact('technicien', 'interventionsTerminee', 'nombreKmParcouru', 'interventionsEnCours'));
     }
 
     public function newIntervention($numeroClient)
@@ -107,5 +107,33 @@ class Gestionnaire extends Controller
             ->get();
 
         return view('gestionnaires/gestion-techniciens', compact('techniciens'));
+    }
+
+
+    // Fonction v1 qui effectue la requête vers la BDD contenant l'ensemble des matériel, puis retourne la vue gestion-materiel (v1)
+    public function showMateriel()
+    {
+
+        $materiel = DB::table('materiel')
+            ->get();
+
+        return view('gestionnaires/gestion-materiel', compact('materiel'));
+    }
+
+
+        // Fonction v2 qui effectue la requête vers la BDD avec une jointure
+        // entre materiel et controllerFaille
+        // et entre failleSecurite et controllerFaille
+        // pour récupérer l'ensembles des failles de sécurité de chaque matériel
+
+    public function showMaterielv2()
+    {
+
+        $materiel = DB::table('materiel')
+            ->join('controllerFaille', 'materiel.numeroDeSerie', '=', 'controllerFaille.numeroDeSerie')
+            ->join('failleSecurite', 'controllerFaille.idFaille', '=', 'failleSecurite.id')
+            ->get();
+
+        return view('gestionnaires/gestion-materiel-v2', compact('materiel'));
     }
 }

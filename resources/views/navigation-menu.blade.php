@@ -20,6 +20,12 @@
                     <x-jet-nav-link href="{{ route('gestion.techniciens') }}" :active="request()->routeIs('gestion.techniciens')">
                         {{ __('Gestion techniciens') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('materiel') }}" :active="request()->routeIs('materiel')">
+                        {{ __('Materiel V1') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('materiel.v2') }}" :active="request()->routeIs('materiel.v2')">
+                        {{ __('Materiel V2') }}
+                    </x-jet-nav-link>
                     @endif
                 </div>
             </div>
@@ -151,6 +157,9 @@
                     </x-jet-nav-link><br>
                     <x-jet-nav-link class="ml-3" href="{{ route('gestion.techniciens') }}" :active="request()->routeIs('gestion.techniciens')">
                         <p class="h4">{{ __('Gestion techniciens') }}</p>
+                    </x-jet-nav-link>
+                    <x-jet-nav-link class="ml-3" href="{{ route('materiel') }}" :active="request()->routeIs('materiel')">
+                        <p class="h4">{{ __('Gestion materiel') }}</p>
                     </x-jet-nav-link>
                     @endif
         </div>

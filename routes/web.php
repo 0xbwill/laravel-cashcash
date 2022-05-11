@@ -32,6 +32,8 @@ Route::get('/assigner/intervention/{numeroClient}', [Gestionnaire::class, 'newIn
 Route::post('/insert/new/intervention', [Gestionnaire::class, 'insertNewIntervention'])->name('insert.intervention');
 Route::get('/gestion-techniciens', [Gestionnaire::class, 'showTechniciens'])->name('gestion.techniciens');
 Route::get('/gestion-techniciens/select', [Gestionnaire::class, 'selectTechnicien'])->name('selection.technicien');
+Route::get('/materiel', [Gestionnaire::class, 'showMateriel'])->name('materiel');
+Route::get('/materiel/v2', [Gestionnaire::class, 'showMaterielv2'])->name('materiel.v2');
 
 // Route pour la génération du PDF
 Route::get('/generate-pdf/{id}', [PDFController::class, 'generatePDF']);
