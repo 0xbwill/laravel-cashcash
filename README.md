@@ -1,7 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-  
-
 ## Contexte
 La société CASHCASH possède 57 agences sur le territoire national. On comprend bien que le nombre d’interventions à gérer sera très important. De plus, chaque client étant rattaché à une agence, la société CASHCASH privilégie la proximité lors des déplacements. Par ailleurs, la réactivité de la société CASHCASH est essentielle pour assurer la confiance qui la lie à ses clients. Son système d’information doit donc pouvoir gérer un maximum d’informations sur les interventions. Une application web a été choisie puisqu’elle permet de s’adapter à l’hétérogénéité des solutions techniques d'accès (STA) des salariés.
 Cela peut être aussi bien des smartphones, des PC plus ou moins performants, des tablettes. Enfin, ces STA fonctionnent sur des systèmes d’exploitation différents (Windows, Linux, Androïd…).
